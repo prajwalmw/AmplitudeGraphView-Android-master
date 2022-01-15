@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.suman.voice.voicerecorder.Plot">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/lineTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rateTimeGraph"
+        android:layout_centerHorizontal="true"
+        android:text="Flow Rate Vs Time"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/recordButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:onClick="toMonitor"
+            android:text="Repeat" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:onClick="save"
+            android:text="Save" />
+
+    </LinearLayout>
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/rateTimeGraph"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/lineTitle"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
+
+    <!--<TextView
+        android:id="@+id/lineVolTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rateTimeGraph"
+        android:layout_centerHorizontal="true"
+        android:text="Flow Rate Vs Volume"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/rateVolumeGraph"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/CalVal"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:text="Results"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="18sp" />
+
+        <!--TextView
+            android:id="@+id/PredVal"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:text="Predicted Value"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="18sp" /-->
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/FEV"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:text="FEV1 :"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/PEF"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:text="PEF :"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/FVC"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:text="FVC :"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/FVCPred"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:text="Pred_FVC :"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/Ratio"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:text="FEV1/FVC :"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/RatioPred"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:text="FVC/Pred_FVC :"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

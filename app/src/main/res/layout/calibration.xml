@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.suman.voice.voicerecorder.Calibration">
+
+    <TextView
+        android:id="@+id/clinicFVC"
+        android:layout_width="348dp"
+        android:layout_height="40dp"
+        android:text="Clinical Spirometer FVC"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/clinicFVCvalue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/clinicFVC"
+        android:layout_alignStart="@+id/clinicFVC"
+        android:ems="10"
+        android:hint="FVC (L)"
+        android:layout_alignLeft="@+id/clinicFVC"
+        android:textSize="20sp"/>
+
+    <!--Button
+        android:id="@+id/CF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate Correction Factor" /-->
+    <TextView
+        android:id="@+id/mFVC"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:text="Calculated FVC: "
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/CorrectionFactor"
+        android:layout_width="348dp"
+        android:layout_height="40dp"
+        android:text="Correction Factor:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/CFvalue"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:hint="Correction Factor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/savedCorrectionFactor"
+        android:layout_width="348dp"
+        android:layout_height="40dp"
+        android:text="Saved Correction Factor:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20sp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewFVC"
+        android:layout_alignStart="@+id/textViewFVC"
+        android:id="@+id/textViewCF"
+        android:background="@android:color/holo_blue_bright"
+        android:layout_alignLeft="@+id/textViewFVC"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/textViewFVC"
+        android:layout_below="@+id/plotCal"
+        android:layout_alignEnd="@+id/plotCal"
+        android:background="@android:color/darker_gray"
+        android:visibility="invisible"
+        android:layout_alignRight="@+id/plotCal" />
+
+    <Button
+        android:id="@+id/plotCal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Plot" />
+</LinearLayout>

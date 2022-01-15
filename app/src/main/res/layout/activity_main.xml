@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.suman.voice.voicerecorder.MainActivity1"
+    android:padding="0dp">
+
+    <com.suman.voice.graphviewlibrary.GraphView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/graphView"
+        android:fillViewport="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true">
+    </com.suman.voice.graphviewlibrary.GraphView>
+
+    <Button
+        android:text="+"
+        android:layout_alignParentRight="true"
+        android:alpha="0.8"
+        android:layout_width="40dp"
+        android:id="@+id/zoomIn"
+        android:layout_height="40dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="10dp"
+        android:onClick="zoomIn" />
+    <Button
+        android:text="-"
+        android:layout_width="40dp"
+        android:layout_alignParentRight="true"
+        android:alpha="0.8"
+        android:id="@+id/zoomOu"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/background_light"
+        android:onClick="zoomOut" />
+    <Button
+        android:text="Plot"
+        android:layout_width="80dp"
+        android:layout_alignParentRight="true"
+        android:alpha="0.8"
+        android:id="@+id/plot"
+        android:layout_below="@id/zoomOu"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/background_light"
+        android:onClick="Plot" />
+
+    <Button
+        android:text="Calibr"
+        android:layout_width="80dp"
+        android:layout_alignParentRight="true"
+        android:alpha="0.8"
+        android:id="@+id/cal1"
+        android:layout_below="@+id/plot"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/background_light"
+        android:onClick="Cal1" />
+
+    <Button
+        android:text="RR"
+        android:layout_width="80dp"
+        android:layout_alignParentRight="true"
+        android:alpha="0.8"
+        android:id="@+id/RR"
+        android:layout_below="@+id/cal1"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/background_light"
+        android:onClick="RR" />
+    <!--Button
+        android:text="Cal+1.0"
+        android:layout_width="80dp"
+        android:layout_alignParentRight="true"
+        android:alpha="0.8"
+        android:id="@+id/cal2"
+        android:layout_below="@+id/cal1"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:textColor="@android:color/background_light"
+        android:onClick="Cal2" />
+    <Button
+        android:text="Cal-0.5"
+        android:layout_width="80dp"
+        android:layout_alignParentRight="true"
+        android:alpha="0.8"
+        android:id="@+id/cal3"
+        android:layout_below="@+id/cal2"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:textColor="@android:color/background_light"
+        android:onClick="Cal3" />
+    <Button
+        android:text="Cal-1.0"
+        android:layout_width="80dp"
+        android:layout_alignParentRight="true"
+        android:alpha="0.8"
+        android:id="@+id/cal4"
+        android:layout_below="@+id/cal3"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:textColor="@android:color/background_light"
+        android:onClick="Cal4" /-->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:text="@string/record"
+        android:id="@+id/control"
+        android:paddingBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="47dp"
+        android:onClick="controlClick"
+        android:background="@android:drawable/btn_default"
+        android:textColor="@android:color/background_light"
+        android:layout_height="40dp"
+        android:textAlignment="center"
+        android:backgroundTint="@android:color/holo_blue_dark" />
+
+   <!-- <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RR"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:switchMinWidth="56dp"
+        android:textOff="OFF"
+        android:textOn="ON" />
+
+    <Button
+        android:id="@+id/chng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switch1"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:alpha="0.8"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="Change"
+        android:textColor="@android:color/background_light" />
+-->
+</RelativeLayout>
