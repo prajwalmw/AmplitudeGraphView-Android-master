@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -71,54 +71,78 @@
         android:id="@+id/norm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=" Normal Range : 12-25 breaths/minute"
+        android:text=" Breath Normal Range : 12-25 breaths/minute"
         android:textColor="#330066"
-        android:textSize="18dp" />
+        android:textSize="16sp" />
+
     <TextView
-        android:id="@+id/space3"
+        android:id="@+id/normCough"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:text=" Cough Normal Range : 12-25 breaths/minute"
+        android:textColor="#330066"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/coughData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" User has Coughed !!!"
+        android:textColor="#330066"
+        android:textSize="23dp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"/>
+
     <TextView
         android:id="@+id/warning"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
         android:textColor="#CC0000"
+        android:text="Warning: Consult Doctor"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
         android:textSize="18dp" />
+
     <TextView
         android:id="@+id/space4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal">
+
         <Button
             android:id="@+id/recordRR"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:onClick="toMonitor"
             android:text="Repeat"
+            android:layout_marginStart="10dp"
             android:background="#003366"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="10dp" />
 
-        <TextView
-            android:id="@+id/space5"
-            android:layout_width="72dp"
-            android:layout_height="wrap_content"
-            android:text="" />
 
         <Button
             android:id="@+id/saveRR"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
             android:onClick="save"
             android:text="Save"
             android:background="#003366"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="20dp" />
 
     </LinearLayout>
 </LinearLayout>

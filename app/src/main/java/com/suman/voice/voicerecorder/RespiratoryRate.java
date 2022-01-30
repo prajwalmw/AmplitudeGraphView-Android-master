@@ -70,6 +70,7 @@ public class RespiratoryRate extends AppCompatActivity {
         TextView maxrrText = (TextView) findViewById(R.id.maxrr);
         TextView minrrText = (TextView) findViewById(R.id.minrr);
         TextView warningText = (TextView)findViewById(R.id.warning);
+        TextView coughData = findViewById(R.id.coughData);
 
         Double RR1 = rr1*60;
         Double RR2 = rr2*60;
@@ -82,8 +83,8 @@ public class RespiratoryRate extends AppCompatActivity {
 
         String rr1String = " RR in 1st 15 Seconds : " + Double.toString(round(RR1,2))+" breaths/min";
         String rr2String = " RR in 2nd 15 Seconds : " + Double.toString(round(RR2,2))+" breaths/min";
-        String rr3String = " RR in 1st 15 Seconds : " + Double.toString(round(RR3,2))+" breaths/min";
-        String rr4String = " RR in 1st 15 Seconds : " + Double.toString(round(RR4,2))+" breaths/min";
+        String rr3String = " RR in 3rd 15 Seconds : " + Double.toString(round(RR3,2))+" breaths/min";
+        String rr4String = " RR in 4th 15 Seconds : " + Double.toString(round(RR4,2))+" breaths/min";
         String rrMaxString = " Maximum RR : " + Double.toString(round(rrMax,2))+" breaths/min";
         String rrMinString = " Minimum RR : " + Double.toString(round(rrMin,2))+" breaths/min";
 
