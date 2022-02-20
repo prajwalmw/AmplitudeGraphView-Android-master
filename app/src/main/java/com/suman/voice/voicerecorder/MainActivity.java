@@ -105,12 +105,43 @@ public class MainActivity extends AppCompatActivity {
 
                 if(et.getText().toString().equalsIgnoreCase("") ||
                         et1.getText().toString().equalsIgnoreCase("") ||
-                        et.getText().toString().equalsIgnoreCase("") ||
                         genderSpinner.getSelectedItem().toString().equalsIgnoreCase("") ||
                         et3.getText().toString().equalsIgnoreCase("") ||
                         et4.getText().toString().equalsIgnoreCase("") ||
                         smokingSpinner.getSelectedItem().toString().equalsIgnoreCase(""))
                 {
+                    //name
+                    if(et.getText().toString().equalsIgnoreCase("")) {
+                        et.setError(getString(R.string.this_field_required));
+                    }
+                    else {
+                        et.setError(null);
+                    }
+
+                    //age
+                    if(et1.getText().toString().equalsIgnoreCase("")) {
+                        et1.setError(getString(R.string.this_field_required));
+                    }
+                    else {
+                        et1.setError(null);
+                    }
+
+                    //height
+                    if(et3.getText().toString().equalsIgnoreCase("")) {
+                        et3.setError(getString(R.string.this_field_required));
+                    }
+                    else {
+                        et3.setError(null);
+                    }
+
+                    //weight
+                    if(et4.getText().toString().equalsIgnoreCase("")) {
+                        et4.setError(getString(R.string.this_field_required));
+                    }
+                    else {
+                        et4.setError(null);
+                    }
+
                     Toast.makeText(MainActivity.this, "Please enter details", Toast.LENGTH_SHORT).show();
                     return;
                 }
