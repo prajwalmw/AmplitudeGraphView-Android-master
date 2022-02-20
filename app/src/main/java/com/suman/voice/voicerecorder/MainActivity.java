@@ -3,6 +3,7 @@ package com.suman.voice.voicerecorder;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputFilter;
@@ -45,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         et1.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "150")}); // Range
 
         final Spinner genderSpinner = findViewById(R.id.spinnerGender);
+        final Spinner smokingSpinner = findViewById(R.id.smokingSpinner);
+        final Spinner chestSpinner = findViewById(R.id.chestSpinner);
 
         final EditText et3 = (EditText)findViewById(R.id.Height);
         et3.setFilters(new InputFilter[]{ new InputFilterMinMax("0", "220")}); // Range
@@ -52,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText et4 = (EditText)findViewById(R.id.Weight);
         et4.setFilters(new InputFilter[]{ new InputFilterMinMax("0", "300")}); // Range
 
-        final Spinner smokingSpinner = findViewById(R.id.smokingSpinner);
+
 
         Button button = (Button)findViewById(R.id.button);
 
@@ -69,18 +72,9 @@ public class MainActivity extends AppCompatActivity {
                         genderSpinner.getSelectedItem().toString().equalsIgnoreCase("") ||
                         et3.getText().toString().equalsIgnoreCase("") ||
                         et4.getText().toString().equalsIgnoreCase("") ||
-                        smokingSpinner.getSelectedItem().toString().equalsIgnoreCase(""))
+                        smokingSpinner.getSelectedItem().toString().equalsIgnoreCase("") ||
+                        chestSpinner.getSelectedItem().toString().equalsIgnoreCase(""))
                 {
-                    //name
-                    if(et.getText().toString().equalsIgnoreCase("")) {
-                        et.setError(getString(R.string.this_field_required));
-                        et.requestFocus();
-                        et.setFocusable(true);
-                        et.setFocusableInTouchMode(true);
-                    }
-                    else {
-                        et.setError(null);
-                    }
 
                     //age
                     if(et1.getText().toString().equalsIgnoreCase("")) {
@@ -92,6 +86,14 @@ public class MainActivity extends AppCompatActivity {
                     else {
                         et1.setError(null);
                     }
+
+                    //gender
+                    if(genderSpinner.getSelectedItemPosition() == 0) {
+                        TextView errorText = (TextView)genderSpinner.getSelectedView();
+                        errorText.setError("");
+                        errorText.setTextColor(Color.RED);//just to highlight that this is an error
+                    }
+
 
                     //height
                     if(et3.getText().toString().equalsIgnoreCase("")) {
@@ -115,9 +117,40 @@ public class MainActivity extends AppCompatActivity {
                         et4.setError(null);
                     }
 
+                    //name
+                    if(et.getText().toString().equalsIgnoreCase("")) {
+                        et.setError(getString(R.string.this_field_required));
+                        et.requestFocus();
+                        et.setFocusable(true);
+                        et.setFocusableInTouchMode(true);
+                    }
+                    else {
+                        et.setError(null);
+                    }
+
+                    //smoking
+                    if(smokingSpinner.getSelectedItemPosition() == 0) {
+                        TextView errorText = (TextView)smokingSpinner.getSelectedView();
+                        errorText.setError("");
+                        errorText.setTextColor(Color.RED);//just to highlight that this is an error
+                    }
+
+                    //chest
+                    if(chestSpinner.getSelectedItemPosition() == 0) {
+                        TextView errorText = (TextView)chestSpinner.getSelectedView();
+                        errorText.setError("");
+                        errorText.setTextColor(Color.RED);//just to highlight that this is an error
+                    }
+
                     return;
                 }
 
+                genderSpinner.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                    }
+                });
 
                 final String store = et.getText().toString();
                 final String store1 = et1.getText().toString();

@@ -15,8 +15,8 @@
         android:id="@+id/graphView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/zoomOu"
         android:layout_above="@+id/linearlayout"
+        android:layout_below="@+id/zoomOu"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
@@ -25,27 +25,29 @@
 
     <Button
         android:id="@+id/zoomIn"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentRight="true"
         android:layout_marginTop="10dp"
         android:layout_marginRight="5dp"
         android:alpha="0.8"
-        android:backgroundTint="@android:color/holo_orange_dark"
+        android:backgroundTint="@android:color/black"
         android:onClick="zoomIn"
         android:text="+"
-        android:textColor="@android:color/background_light" />
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/zoomOu"
         android:text="-"
-        android:layout_width="40dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentRight="true"
         android:alpha="0.8"
-        android:layout_height="40dp"
-        android:layout_marginTop="45dp"
+        android:layout_below="@+id/zoomIn"
         android:layout_marginRight="5dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
+        android:textSize="25sp"
+        android:backgroundTint="@android:color/black"
         android:textColor="@android:color/background_light"
         android:onClick="zoomOut" />
 
@@ -105,10 +107,9 @@
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:alpha="0.8"
-            android:backgroundTint="@android:color/holo_blue_dark"
+            android:backgroundTint="@android:color/black"
             android:onClick="Plot"
-            android:text="Plot"
+            android:text="Graph"
             android:textColor="@android:color/background_light" />
 
         <Button
@@ -116,18 +117,18 @@
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:backgroundTint="@android:color/holo_blue_dark"
+            android:backgroundTint="@android:color/black"
             android:onClick="Cal1"
-            android:text="Calibr"
+            android:text="Calibration"
             android:textColor="@android:color/background_light" />
 
         <Button
-            android:text="RR"
+            android:id="@+id/RR"
+            android:text="Resp.rate"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:id="@+id/RR"
-            android:backgroundTint="@android:color/holo_blue_dark"
+            android:backgroundTint="@android:color/black"
             android:textColor="@android:color/background_light"
             android:onClick="RR" />
 
@@ -137,18 +138,19 @@
         android:id="@+id/control"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
         android:background="@android:drawable/btn_default"
-        android:backgroundTint="@android:color/holo_orange_dark"
+        android:backgroundTint="@android:color/black"
+        android:gravity="center"
         android:onClick="controlClick"
         android:text="@string/record"
         android:textColor="@android:color/background_light"
         android:textSize="18sp"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold" />
 
    <!-- <Switch
         android:id="@+id/switch1"

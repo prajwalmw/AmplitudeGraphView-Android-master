@@ -2,13 +2,22 @@
 <resources>
 
     <string-array name="genderArray">
+        <item>Select</item>
         <item>Male</item>
         <item>Female</item>
     </string-array>
 
     <string-array name="smokingArray">
+        <item>Select</item>
         <item>Yes</item>
         <item>No</item>
     </string-array>
+
+    <string-array name="chestArray">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
 
 </resources>
