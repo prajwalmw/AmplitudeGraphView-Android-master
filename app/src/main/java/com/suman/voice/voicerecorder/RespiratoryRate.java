@@ -72,15 +72,44 @@ public class RespiratoryRate extends AppCompatActivity {
         TextView warningText = (TextView)findViewById(R.id.warning);
         TextView coughData = findViewById(R.id.coughData);
 
-        Double RR1 = rr1*60;
-        Double RR2 = rr2*60;
-        Double RR3 = rr3*60;
-        Double RR4 = rr4*60;
+        Double RR1, RR2, RR3, RR4;
+        //RR1
+        if(rr1 == 0.078125) {
+            RR1 = 0.0;
+        }
+        else {
+            RR1 = rr1*60;
+        }
+
+        //RR2
+        if(rr2 == 0.078125) {
+            RR2 = 0.0;
+        }
+        else {
+            RR2 = rr2*60;
+        }
+
+        //RR3
+        if(rr3 == 0.078125) {
+            RR3 = 0.0;
+        }
+        else {
+            RR3 = rr3*60;
+        }
+
+        //RR4
+        if(rr4 == 0.078125) {
+            RR4 = 0.0;
+        }
+        else {
+            RR4 = rr4*60;
+        }
 
         double[] dblArray = {RR1,RR2,RR3,RR4};
         rrMax = getMax(dblArray);
         rrMin = getMin(dblArray);
 
+        String u = Double.toString(round(RR4, 2));
         String rr1String = " RR in 1st 15 Seconds : " + Double.toString(round(RR1,2))+" breaths/min";
         String rr2String = " RR in 2nd 15 Seconds : " + Double.toString(round(RR2,2))+" breaths/min";
         String rr3String = " RR in 3rd 15 Seconds : " + Double.toString(round(RR3,2))+" breaths/min";

@@ -15,10 +15,12 @@
         android:id="@+id/graphView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/zoomOu"
+        android:layout_above="@+id/linearlayout"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
+        android:layout_marginVertical="10dp"
         android:fillViewport="true" />
 
     <Button
@@ -35,11 +37,11 @@
         android:textColor="@android:color/background_light" />
 
     <Button
+        android:id="@+id/zoomOu"
         android:text="-"
         android:layout_width="40dp"
         android:layout_alignParentRight="true"
         android:alpha="0.8"
-        android:id="@+id/zoomOu"
         android:layout_height="40dp"
         android:layout_marginTop="45dp"
         android:layout_marginRight="5dp"
@@ -90,6 +92,7 @@
         android:onClick="Cal4" /-->
 
     <LinearLayout
+        android:id="@+id/linearlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="3"
