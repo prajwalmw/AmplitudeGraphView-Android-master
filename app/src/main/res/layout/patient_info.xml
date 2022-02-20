@@ -27,7 +27,10 @@
             android:layout_width="0dp"
             android:layout_weight="7"
             android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:layout_marginLeft="10dp"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
             android:hint="Enter your name" />
 
     </LinearLayout>
@@ -56,6 +59,9 @@
             android:id="@+id/Age"
             android:layout_width="0dp"
             android:layout_weight="7"
+            android:inputType="number"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:hint="Enter your Age (yr)" />
@@ -114,6 +120,8 @@
             android:layout_width="0dp"
             android:layout_weight="7"
             android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:inputType="number"
             android:layout_marginLeft="10dp"
             android:hint="Enter your Height (cm)" />
@@ -143,6 +151,8 @@
             android:layout_width="0dp"
             android:layout_weight="7"
             android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:hint="Enter your Weight (kg)"
             android:layout_marginLeft="10dp"
             android:inputType="number" />
