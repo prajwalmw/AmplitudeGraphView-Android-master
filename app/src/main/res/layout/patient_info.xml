@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_marginStart="5dp"
     android:layout_height="match_parent"
-    android:layout_marginLeft="10dp"
-    android:layout_marginEnd="10dp"
-    android:layout_marginRight="10dp">
+    android:layout_margin="10dp">
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/realtiveName"
+        android:orientation="horizontal"
+        android:weightSum="10"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/nameId"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textStyle="bold"
             android:layout_centerVertical="true"
+            android:textSize="16sp"
             android:text="Name: " />
 
         <EditText
             android:id="@+id/Name"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="8"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/nameId"
-            android:layout_toRightOf="@+id/nameId"
+            android:layout_marginLeft="10dp"
             android:hint="Enter your name" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
 
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/realtiveAge"
+        android:orientation="horizontal"
+        android:weightSum="10"
         android:layout_width="match_parent"
         android:layout_below="@id/realtiveName"
         android:layout_marginTop="10dp"
@@ -43,50 +45,66 @@
 
         <TextView
             android:id="@+id/ageId"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:textStyle="bold"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:layout_centerVertical="true"
             android:text="Age: "/>
 
         <EditText
             android:id="@+id/Age"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="8"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="15dp"
-            android:layout_toEndOf="@+id/ageId"
-            android:layout_toRightOf="@+id/ageId"
             android:hint="Enter your age(yrs)"
+            android:layout_marginLeft="10dp"
             android:inputType="number" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/realtiveSex"
+        android:orientation="horizontal"
+        android:weightSum="10"
         android:layout_width="match_parent"
         android:layout_below="@id/realtiveAge"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/sexId"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:textStyle="bold"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:layout_centerVertical="true"
             android:text="Gender: "/>
 
+        <Spinner
+            android:id="@+id/spinnerGender"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:entries="@array/genderArray" />
+<!--
         <EditText
+            android:id="@+id/Sex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your gender"
             android:layout_toEndOf="@+id/sexId"
             android:layout_toRightOf="@+id/sexId"
-            android:id="@+id/Sex" />
+            android:hint="Enter your gender" />
+-->
+    </LinearLayout>
 
-    </RelativeLayout>
-
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/realtiveHeight"
+        android:orientation="horizontal"
+        android:weightSum="10"
         android:layout_width="match_parent"
         android:layout_below="@id/realtiveSex"
         android:layout_marginTop="10dp"
@@ -94,25 +112,30 @@
 
         <TextView
             android:id="@+id/heightId"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:textStyle="bold"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:layout_centerVertical="true"
             android:text="Height: "/>
 
         <EditText
             android:id="@+id/Height"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="8"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:layout_toEndOf="@+id/heightId"
-            android:layout_toRightOf="@+id/heightId"
+            android:layout_marginLeft="10dp"
             android:hint="Enter your Height (cm)" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/realtiveWeight"
+        android:orientation="horizontal"
+        android:weightSum="10"
         android:layout_width="match_parent"
         android:layout_below="@id/realtiveHeight"
         android:layout_marginTop="10dp"
@@ -120,48 +143,67 @@
 
         <TextView
             android:id="@+id/weightId"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:textStyle="bold"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:layout_centerVertical="true"
             android:text="Weight: "/>
 
         <EditText
             android:id="@+id/Weight"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="8"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/weightId"
-            android:layout_toRightOf="@+id/weightId"
             android:hint="Enter your Weight (kg)"
+            android:layout_marginLeft="10dp"
             android:inputType="number" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/realtivePlace"
+    <LinearLayout
+        android:id="@+id/realtiveSmoking"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/realtiveWeight"
         android:layout_marginTop="10dp"
-        android:layout_height="wrap_content">
+        android:orientation="horizontal"
+        android:weightSum="10">
 
         <TextView
-            android:id="@+id/placeId"
-            android:layout_width="wrap_content"
+            android:id="@+id/smokingId"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:text="Place: "/>
+            android:layout_weight="2"
+            android:text="Smoking Habits: "
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/Place"
-            android:layout_width="match_parent"
+        <Spinner
+            android:id="@+id/smokingSpinner"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_toEndOf="@+id/placeId"
-            android:layout_toRightOf="@+id/placeId"
-            android:hint="Enter Place" />
+            android:layout_marginTop="8dp"
+            android:layout_weight="8"
+            android:layout_marginLeft="13dp"
+            android:entries="@array/smokingArray" />
 
-    </RelativeLayout>
+        <!--
+                <EditText
+                    android:id="@+id/SmokingHabit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/smokingId"
+                    android:layout_toRightOf="@+id/smokingId"
+                    android:hint="Enter Place" />
+        -->
+
+    </LinearLayout>
 
 
 
@@ -198,10 +240,13 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="50dp"
-        android:background="@color/colorPrimary"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="Submit"
+        android:paddingVertical="10dp"
         android:textColor="@android:color/white"
-        android:text="Submit" />
+        android:textSize="18sp"
+        android:textStyle="italic|bold" />
 
    <!-- <TextView
         android:text="TextView"

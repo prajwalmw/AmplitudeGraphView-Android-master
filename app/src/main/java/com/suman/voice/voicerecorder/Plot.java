@@ -262,7 +262,9 @@ public class Plot extends AppCompatActivity {
         }
         String result = FILE_NAME2+seq.toString()+".txt";
         String strIncom;
-        strIncom = "Results: "+"\r\n"+"Name: "+Name+"\r\n"+"Age: "+Age+" "+"Sex: "+Sex+"\r\n"+"Height: "+Height+"\r\n"+"Weight: "+Weight+"\r\n"+"FEV:"+String.valueOf(FEV)+"\r\n"+"FVC:"+String.valueOf(FVC)+"\r\n"+"Ratio:"+String.valueOf(ratio)+"\r\n"+"PEF:"+String.valueOf(PEF);
+        strIncom = "Results: "+"\r\n"+"Name: "+Name+"\r\n"+"Age: "+Age+" "+"Sex: "+Sex+"\r\n"+"Height: "+Height+"\r\n"
+                +"Weight: "+Weight+"\r\n"+"FEV:"+String.valueOf(FEV)+"\r\n"+"FVC:"+String.valueOf(FVC)+"\r\n"+"Ratio:"+
+                String.valueOf(ratio)+"\r\n"+"PEF:"+String.valueOf(PEF);
         File file1 = new File(dir,result);
         try {
             FileWriter fw = new FileWriter(file1.getAbsoluteFile());
