@@ -3,6 +3,7 @@ package com.suman.voice.voicerecorder;
 /**
  * Created by Anand on 25-03-2016.
  */
+
 import android.media.MediaRecorder;
 import android.os.Environment;
 
@@ -102,8 +103,8 @@ public class VoiceRecorder {
         myAudioRecorder.release();
         myAudioRecorder = null;
         longValue = new long[pointList.size()];
-        for(int i = 0; i<pointList.size(); i++){
-            if(pointList.get(i)!=null) {
+        for (int i = 0; i < pointList.size(); i++) {
+            if (pointList.get(i) != null) {
                 longValue[i] = pointList.get(i).getAmplitude();
                 //Log.d("output","WaveValue " + String.valueOf(longValue[i]));
             }
@@ -188,7 +189,8 @@ public class VoiceRecorder {
         });
         mRecordingThread.start();
     }
-    public long[] plotSpiro(){
+
+    public long[] plotSpiro() {
         return longValue;
     }
 }

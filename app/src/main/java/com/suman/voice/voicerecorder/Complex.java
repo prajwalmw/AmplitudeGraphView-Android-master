@@ -3,6 +3,7 @@ package com.suman.voice.voicerecorder;
 public class Complex {
     private final double re;   // the real part
     private final double im;   // the imaginary part
+
     public Complex() {
         this(0, 0);
     }
@@ -24,6 +25,7 @@ public class Complex {
         return new Complex(this.re * b.re - this.im * b.im,
                 this.re * b.im + this.im * b.re);
     }
+
     public double abs() {
         return Math.hypot(re, im);
     }

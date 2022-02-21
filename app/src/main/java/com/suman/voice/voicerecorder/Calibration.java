@@ -38,6 +38,7 @@ public class Calibration extends AppCompatActivity {
     final String preferencesCal = "pref";
     final String saveItCal = "saveFVC";
     final String saveItCF = "saveCF";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // getting attached intent data
@@ -53,25 +54,25 @@ public class Calibration extends AppCompatActivity {
         Height = extra.getString("Height");
         Weight = extra.getString("Weight");
         FVC = extra.getDouble("FVC");
-        final EditText clinicFVC = (EditText)findViewById(R.id.clinicFVCvalue);
+        final EditText clinicFVC = (EditText) findViewById(R.id.clinicFVCvalue);
         //Button buttonCF = (Button)findViewById(R.id.CF);
-        final EditText CFvalue = (EditText)findViewById(R.id.CFvalue);
-        final TextView tvFVC,tvCF;
-        tvFVC = (TextView)findViewById(R.id.textViewFVC);
-        tvCF = (TextView)findViewById(R.id.textViewCF);
-        Button plot = (Button)findViewById(R.id.plotCal);
+        final EditText CFvalue = (EditText) findViewById(R.id.CFvalue);
+        final TextView tvFVC, tvCF;
+        tvFVC = (TextView) findViewById(R.id.textViewFVC);
+        tvCF = (TextView) findViewById(R.id.textViewCF);
+        Button plot = (Button) findViewById(R.id.plotCal);
 
         TextView mFVC = (TextView) findViewById(R.id.mFVC);
-        String fvcText = "Calculated FVC : " + Double.toString(round(FVC,2));
+        String fvcText = "Calculated FVC : " + Double.toString(round(FVC, 2));
         mFVC.setText(fvcText);
 
         sfCal = getSharedPreferences(preferencesCal, Context.MODE_PRIVATE);
         //SharedPreferences.Editor editor = sfCal.edit();
 
-            clinicFVC.setText(sfCal.getString(saveItCal, ""));
-            CFvalue.setText(sfCal.getString(saveItCF,""));
-            tvFVC.setText(sfCal.getString(saveItCal, ""));
-            tvCF.setText(sfCal.getString(saveItCF, ""));
+        clinicFVC.setText(sfCal.getString(saveItCal, ""));
+        CFvalue.setText(sfCal.getString(saveItCF, ""));
+        tvFVC.setText(sfCal.getString(saveItCal, ""));
+        tvCF.setText(sfCal.getString(saveItCF, ""));
 
         tvFVC.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +96,7 @@ public class Calibration extends AppCompatActivity {
                 String storeCF = CFvalue.getText().toString();
                 editorCal.putString(saveItCF, storeCF);
                 editorCal.apply();
-                if(storeCF.equalsIgnoreCase(""))
+                if (storeCF.equalsIgnoreCase(""))
                     CF = Double.parseDouble("0");
                 else
                     CF = Double.parseDouble(storeCF);
@@ -126,6 +127,7 @@ public class Calibration extends AppCompatActivity {
             }
         });
     }
+
     public static double round(double value, int places) {
         if (places < 0) throw new IllegalArgumentException();
 

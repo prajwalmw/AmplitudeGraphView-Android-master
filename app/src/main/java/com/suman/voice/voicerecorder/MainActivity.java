@@ -40,104 +40,98 @@ public class MainActivity extends AppCompatActivity {
         // getting attached intent data
         super.onCreate(savedInstanceState);
         setContentView(R.layout.patient_info);
-        final EditText et = (EditText)findViewById(R.id.Name);
+        final EditText et = (EditText) findViewById(R.id.Name);
 
-        final EditText et1 = (EditText)findViewById(R.id.Age);
-        et1.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "150")}); // Range
+        final EditText et1 = (EditText) findViewById(R.id.Age);
+        et1.setFilters(new InputFilter[]{new InputFilterMinMax("1", "150")}); // Range
 
         final Spinner genderSpinner = findViewById(R.id.spinnerGender);
         final Spinner smokingSpinner = findViewById(R.id.smokingSpinner);
         final Spinner chestSpinner = findViewById(R.id.chestSpinner);
 
-        final EditText et3 = (EditText)findViewById(R.id.Height);
-        et3.setFilters(new InputFilter[]{ new InputFilterMinMax("0", "220")}); // Range
+        final EditText et3 = (EditText) findViewById(R.id.Height);
+        et3.setFilters(new InputFilter[]{new InputFilterMinMax("0", "220")}); // Range
 
-        final EditText et4 = (EditText)findViewById(R.id.Weight);
-        et4.setFilters(new InputFilter[]{ new InputFilterMinMax("0", "300")}); // Range
+        final EditText et4 = (EditText) findViewById(R.id.Weight);
+        et4.setFilters(new InputFilter[]{new InputFilterMinMax("0", "300")}); // Range
 
 
-
-        Button button = (Button)findViewById(R.id.button);
+        Button button = (Button) findViewById(R.id.button);
 
         sf = getSharedPreferences(preferences, Context.MODE_PRIVATE);
-        Log.d("flowRates","Login"+String.valueOf(sf.getString(saveIt,"")));
+        Log.d("flowRates", "Login" + String.valueOf(sf.getString(saveIt, "")));
 
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if(et.getText().toString().equalsIgnoreCase("") ||
+                if (et.getText().toString().equalsIgnoreCase("") ||
                         et1.getText().toString().equalsIgnoreCase("") ||
                         genderSpinner.getSelectedItem().toString().equalsIgnoreCase("") ||
                         et3.getText().toString().equalsIgnoreCase("") ||
                         et4.getText().toString().equalsIgnoreCase("") ||
                         smokingSpinner.getSelectedItem().toString().equalsIgnoreCase("") ||
-                        chestSpinner.getSelectedItem().toString().equalsIgnoreCase(""))
-                {
+                        chestSpinner.getSelectedItem().toString().equalsIgnoreCase("")) {
 
                     //age
-                    if(et1.getText().toString().equalsIgnoreCase("")) {
+                    if (et1.getText().toString().equalsIgnoreCase("")) {
                         et1.requestFocus();
                         et1.setError(getString(R.string.this_field_required));
                         et1.setFocusable(true);
                         et1.setFocusableInTouchMode(true);
-                    }
-                    else {
+                    } else {
                         et1.setError(null);
                     }
 
                     //gender
-                    if(genderSpinner.getSelectedItemPosition() == 0) {
-                        TextView errorText = (TextView)genderSpinner.getSelectedView();
+                    if (genderSpinner.getSelectedItemPosition() == 0) {
+                        TextView errorText = (TextView) genderSpinner.getSelectedView();
                         errorText.setError("");
                         errorText.setTextColor(Color.RED);//just to highlight that this is an error
                     }
 
 
                     //height
-                    if(et3.getText().toString().equalsIgnoreCase("")) {
+                    if (et3.getText().toString().equalsIgnoreCase("")) {
                         et3.requestFocus();
                         et3.setError(getString(R.string.this_field_required));
                         et3.setFocusable(true);
                         et3.setFocusableInTouchMode(true);
-                    }
-                    else {
+                    } else {
                         et3.setError(null);
                     }
 
                     //weight
-                    if(et4.getText().toString().equalsIgnoreCase("")) {
+                    if (et4.getText().toString().equalsIgnoreCase("")) {
                         et4.requestFocus();
                         et4.setError(getString(R.string.this_field_required));
                         et4.setFocusable(true);
                         et4.setFocusableInTouchMode(true);
-                    }
-                    else {
+                    } else {
                         et4.setError(null);
                     }
 
                     //name
-                    if(et.getText().toString().equalsIgnoreCase("")) {
+                    if (et.getText().toString().equalsIgnoreCase("")) {
                         et.setError(getString(R.string.this_field_required));
                         et.requestFocus();
                         et.setFocusable(true);
                         et.setFocusableInTouchMode(true);
-                    }
-                    else {
+                    } else {
                         et.setError(null);
                     }
 
                     //smoking
-                    if(smokingSpinner.getSelectedItemPosition() == 0) {
-                        TextView errorText = (TextView)smokingSpinner.getSelectedView();
+                    if (smokingSpinner.getSelectedItemPosition() == 0) {
+                        TextView errorText = (TextView) smokingSpinner.getSelectedView();
                         errorText.setError("");
                         errorText.setTextColor(Color.RED);//just to highlight that this is an error
                     }
 
                     //chest
-                    if(chestSpinner.getSelectedItemPosition() == 0) {
-                        TextView errorText = (TextView)chestSpinner.getSelectedView();
+                    if (chestSpinner.getSelectedItemPosition() == 0) {
+                        TextView errorText = (TextView) chestSpinner.getSelectedView();
                         errorText.setError("");
                         errorText.setTextColor(Color.RED);//just to highlight that this is an error
                     }
@@ -165,12 +159,12 @@ public class MainActivity extends AppCompatActivity {
                 Height = et3.getText().toString();
                 Weight = et4.getText().toString();
 
-                Log.d("Login Info","LoginInfo"+Name+" "+Age+" "+Sex);
+                Log.d("Login Info", "LoginInfo" + Name + " " + Age + " " + Sex);
                 Intent intent = new Intent(getApplicationContext(), MainActivity1.class);
                 intent.putExtra("Name", Name);
-                intent.putExtra("Age",Age);
-                intent.putExtra("Sex",Sex);
-                intent.putExtra("Height",Height);
+                intent.putExtra("Age", Age);
+                intent.putExtra("Sex", Sex);
+                intent.putExtra("Height", Height);
                 intent.putExtra("Weight", Weight);
                 startActivity(intent);
             }
