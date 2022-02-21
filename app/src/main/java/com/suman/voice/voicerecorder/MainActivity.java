@@ -145,13 +145,6 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                genderSpinner.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-                    }
-                });
-
                 final String store = et.getText().toString();
                 final String store1 = et1.getText().toString();
                 final String store3 = et3.getText().toString();
