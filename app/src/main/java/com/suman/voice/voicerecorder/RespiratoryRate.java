@@ -71,7 +71,7 @@ public class RespiratoryRate extends AppCompatActivity {
         TextView maxrrText = (TextView) findViewById(R.id.maxrr);
         TextView minrrText = (TextView) findViewById(R.id.minrr);
         TextView warningText = (TextView) findViewById(R.id.warning);
-        TextView coughData = findViewById(R.id.coughData);
+       // TextView coughData = findViewById(R.id.coughData);
 
         Double RR1, RR2, RR3, RR4;
         //RR1

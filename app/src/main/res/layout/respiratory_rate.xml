@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -10,12 +11,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Respiratory Rate (RR)"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center_horizontal" />
     <TextView
         android:id="@+id/space"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp">
 
     <TextView
         android:id="@+id/rr1"
@@ -30,6 +40,7 @@
         android:layout_height="wrap_content"
         android:text=" RR in 2nd 15 Seconds :"
         android:textColor="#003366"
+        android:layout_marginTop="10dp"
         android:textSize="18dp" />
     <TextView
         android:id="@+id/rr3"
@@ -37,6 +48,7 @@
         android:layout_height="wrap_content"
         android:text=" RR in 3rd 15 Seconds :"
         android:textColor="#003366"
+        android:layout_marginTop="10dp"
         android:textSize="18dp" />
     <TextView
         android:id="@+id/rr4"
@@ -44,36 +56,48 @@
         android:layout_height="wrap_content"
         android:text=" RR in 4th 15 Seconds :"
         android:textColor="#003366"
+        android:layout_marginTop="10dp"
         android:textSize="18dp" />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/space1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="" />
+
     <TextView
         android:id="@+id/maxrr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=" Maximum RR :"
-        android:textSize="18dp" /><!--android:textColor="#000066"-->
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="18dp" />
+
     <TextView
         android:id="@+id/minrr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=" Minimum RR :"
-        android:textSize="18dp" /><!--android:textColor="#000066"-->
+        android:layout_marginHorizontal="20dp"
+        android:textSize="18dp" />
+
     <TextView
         android:id="@+id/space2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="" />
-    <TextView
+
+   <!-- <TextView
         android:id="@+id/norm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=" Breath Normal Range : 12-25 breaths/minute"
         android:textColor="#330066"
-        android:textSize="16sp" />
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:gravity="center_horizontal" />
 
     <TextView
         android:id="@+id/normCough"
@@ -81,7 +105,9 @@
         android:layout_height="wrap_content"
         android:text=" Cough Normal Range : 12-25 breaths/minute"
         android:textColor="#330066"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
 
 
     <TextView
@@ -94,7 +120,7 @@
         android:textAlignment="center"
         android:gravity="center_horizontal"
         android:layout_marginTop="30dp"/>
-
+-->
     <TextView
         android:id="@+id/warning"
         android:layout_width="match_parent"

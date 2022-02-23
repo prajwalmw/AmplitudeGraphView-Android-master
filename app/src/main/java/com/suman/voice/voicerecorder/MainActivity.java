@@ -68,11 +68,11 @@ public class MainActivity extends AppCompatActivity {
 
                 if (et.getText().toString().equalsIgnoreCase("") ||
                         et1.getText().toString().equalsIgnoreCase("") ||
-                        genderSpinner.getSelectedItem().toString().equalsIgnoreCase("") ||
+                        genderSpinner.getSelectedItemPosition() == 0 ||
                         et3.getText().toString().equalsIgnoreCase("") ||
                         et4.getText().toString().equalsIgnoreCase("") ||
-                        smokingSpinner.getSelectedItem().toString().equalsIgnoreCase("") ||
-                        chestSpinner.getSelectedItem().toString().equalsIgnoreCase("")) {
+                        smokingSpinner.getSelectedItemPosition() == 0 ||
+                        chestSpinner.getSelectedItemPosition() == 0) {
 
                     //age
                     if (et1.getText().toString().equalsIgnoreCase("")) {
